@@ -7,7 +7,7 @@ const Producto = require('../models/producto');
 const fs = require('fs');
 const path = require('path');
 
-app.use(fileUpload({ useTempFiles: true }));
+app.use(fileUpload({ useTempFiles: true, tempFileDir: '/tmp/' }));
 
 app.put('/upload/:tipo/:id', (req, res) => {
 
