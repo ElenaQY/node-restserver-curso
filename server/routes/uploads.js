@@ -78,7 +78,7 @@ function imagenUsuario(id, res, nombreArchivo) {
         };
         if (!usuario) {
             borraArchivo(nombreArchivo, 'usuarios');
-            res.status(400).json({
+            return res.status(400).json({
                 ok: false,
                 err: {
                     message: 'El usuario no existe'
@@ -115,7 +115,7 @@ function imagenProducto(id, res, nombreArchivo) {
         };
         if (!producto) {
             borraArchivo(nombreArchivo, 'productos');
-            res.status(400).json({
+            return res.status(400).json({
                 ok: false,
                 err: {
                     message: 'El producto no existe'
